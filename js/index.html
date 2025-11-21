@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Icon Calculator</title>
+
+<style>
+    body {
+        background: #1e1e2e;
+        font-family: Arial, sans-serif;
+        color: #cdd6f4;
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .calculator {
+        background: #313244;
+        padding: 25px;
+        border-radius: 12px;
+        width: 380px;
+        text-align: center;
+    }
+
+    .input-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .num-input {
+        width: 80px;
+        padding: 8px;
+        background: #45475a;
+        border: none;
+        color: white;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    button {
+        background: #89b4fa;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #1e1e2e;
+    }
+
+    button:hover {
+        background: #74a0e6;
+    }
+
+    /* ---- Custom Icon Dropdown ---- */
+    .dropdown {
+        position: relative;
+        width: 55px;
+        height: 55px;
+        background: #45475a;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: white;
+        user-select: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #45475a;
+        border-radius: 6px;
+        width: 55px;
+        padding: 5px 0;
+        z-index: 10;
+    }
+
+    .dropdown-item {
+        padding: 8px 0;
+        cursor: pointer;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .dropdown-item:hover {
+        background: #89b4fa33;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <h2>Icon Calculator</h2>
+
+    <div class="input-row">
+
+        <input type="text" id="numA" class="num-input" placeholder="A">
+
+        <!-- Custom dropdown -->
+        <div id="opSelect" class="dropdown">
+            <span id="selectedIcon">+</span>
+
+            <div class="dropdown-menu">
+                <div class="dropdown-item" data-op="+">+</div>
+                <div class="dropdown-item" data-op="-">−</div>
+                <div class="dropdown-item" data-op="*">×</div>
+                <div class="dropdown-item" data-op="/">÷</div>
+            </div>
+        </div>
+
+        <input type="text" id="numB" class="num-input" placeholder="B">
+    </div>
+
+    <button id="calcBtn">Calculate</button>
+
+    <p id="result">Result: </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
