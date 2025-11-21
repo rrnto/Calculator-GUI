@@ -3,7 +3,7 @@
 This repository contains two implementations of a simple calculator that supports addition, subtraction, multiplication, and division:
 
 ## Python Version
-- Console-based calculator for quick arithmetic
+- Calculator for quick arithmetic
 - Optional GUI version using Tkinter
 - Handles invalid input and division by zero
 
